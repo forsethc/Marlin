@@ -214,7 +214,7 @@
   #define LCD_PINS_D4                EXP3_06_PIN
 
   #define BTN_ENC                    EXP3_02_PIN
-  #define BTN_EN1                    EXP3_03_PIN
+  #define BTN_EN1                    PA2
   #define BTN_EN2                    EXP3_05_PIN
 
   #ifndef HAS_PIN_27_BOARD
