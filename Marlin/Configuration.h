@@ -1756,7 +1756,7 @@
    */
   #define ENABLE_LEVELING_FADE_HEIGHT
   #if ENABLED(ENABLE_LEVELING_FADE_HEIGHT)
-    #define DEFAULT_LEVELING_FADE_HEIGHT 10.0 // (mm) Default fade height.
+    #define DEFAULT_LEVELING_FADE_HEIGHT 0.0 // (mm) Default fade height.
   #endif
 
   /**
@@ -2051,7 +2051,7 @@
 #define PREHEAT_1_TEMP_HOTEND 205
 #define PREHEAT_1_TEMP_BED     60
 #define PREHEAT_1_TEMP_CHAMBER 35
-#define PREHEAT_1_FAN_SPEED     128 // Value from 0 to 255
+#define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
 #define PREHEAT_2_LABEL       "ABS"
 #define PREHEAT_2_TEMP_HOTEND 240
