@@ -935,8 +935,8 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // Board v301 Configs
-#define Y_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.  // Board v301 Configs
+#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.  // Board v301 Configs
+#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.  // Board v301 Configs
 #define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.  // Board v301 Configs
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1473,9 +1473,9 @@
 // @section motion
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR false  // Ender Configs
-#define INVERT_Y_DIR false  // Ender Configs
-#define INVERT_Z_DIR true  // Ender Configs
+#define INVERT_X_DIR true
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR false
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1486,7 +1486,7 @@
 // @section extruder
 
 // For direct drive extruder v9 set to true, for geared extruder set to false.
-#define INVERT_E0_DIR false
+#define INVERT_E0_DIR true
 #define INVERT_E1_DIR false
 #define INVERT_E2_DIR false
 #define INVERT_E3_DIR false
@@ -2299,7 +2299,7 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-#define SDSUPPORT  // Ender Configs
+//#define SDSUPPORT  // Ender Configs
 
 /**
  * SD CARD: ENABLE CRC
