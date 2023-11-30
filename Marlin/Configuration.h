@@ -1102,9 +1102,9 @@
 #endif
 
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
-#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.  // Board v301 Configs
-#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.  // Board v301 Configs
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.  // Board v301 Configs
+#define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1235,7 +1235,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    5.0  // May be used by Linear Advance  // Ender Configs
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1560,9 +1560,9 @@
  * Example: `M851 Z-5` with a CLEARANCE of 4  =>  9mm from bed to nozzle.
  *     But: `M851 Z+1` with a CLEARANCE of 2  =>  2mm from bed to nozzle.
  */
-#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow  // MRiscoC Increase speed
-#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points  // MRiscoC Increase probe compatibility
-#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes  // MRiscoC Increase speed
+#define Z_CLEARANCE_DEPLOY_PROBE   10 // Z Clearance for Deploy/Stow
+#define Z_CLEARANCE_BETWEEN_PROBES  5 // Z Clearance between probe points
+#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -3 // Farthest distance below the trigger-point to go before stopping  // MRiscoC allows reach lower points
@@ -1674,10 +1674,10 @@
  */
 //#define Z_IDLE_HEIGHT Z_HOME_POS
 
-//#define Z_HOMING_HEIGHT  10      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...  // MRiscoC Crearance over the bed
+//#define Z_HOMING_HEIGHT  4      // (mm) Minimal Z height before homing (G28) for Z clearance above the bed, clamps, ...
                                   // Be sure to have this much clearance over your Z_MAX_POS to prevent grinding.
 
-//#define Z_AFTER_HOMING  5      // (mm) Height to move to after homing Z  // MRiscoC Crearance over the bed
+//#define Z_AFTER_HOMING  10      // (mm) Height to move to after homing Z
 
 // Direction of endstops when homing; 1=MAX, -1=MIN
 // :[-1,1]
@@ -1873,7 +1873,7 @@
  */
 //#define AUTO_BED_LEVELING_3POINT
 //#define AUTO_BED_LEVELING_LINEAR
-//#define AUTO_BED_LEVELING_BILINEAR  // MRiscoC BLTouch auto level
+//#define AUTO_BED_LEVELING_BILINEAR
 #define AUTO_BED_LEVELING_UBL
 //#define MESH_BED_LEVELING
 
@@ -1969,10 +1969,10 @@
     // Experimental Subdivision of the grid by Catmull-Rom method.
     // Synthesizes intermediate points to produce a more detailed mesh.
     //
-    //#define ABL_BILINEAR_SUBDIVISION  // Original Ender3S1 Configs set this to Enable
+    //#define ABL_BILINEAR_SUBDIVISION
     #if ENABLED(ABL_BILINEAR_SUBDIVISION)
       // Number of subdivisions between probe points
-      #define BILINEAR_SUBDIVISIONS 5  // Ender3S1 Configs
+      #define BILINEAR_SUBDIVISIONS 3
     #endif
 
   #endif
@@ -1985,8 +1985,8 @@
 
   //#define MESH_EDIT_GFX_OVERLAY   // Display a graphics overlay while editing the mesh
 
-  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh
-  #define GRID_MAX_POINTS_X 7      // Don't use more than 15 points per axis, implementation limited.  // MRiscoC Customizable by menu
+  #define MESH_INSET 1              // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 10      // Don't use more than 15 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define UBL_HILBERT_CURVE       // Use Hilbert distribution for less travel when probing multiple points
@@ -2005,8 +2005,8 @@
   //=================================== Mesh ==================================
   //===========================================================================
 
-  #define MESH_INSET 38          // Set Mesh bounds as an inset region of the bed  // MRiscoC Center mesh
-  #define GRID_MAX_POINTS_X 5    // Don't use more than 7 points per axis, implementation limited.  // MRiscoC Customizable by menu
+  #define MESH_INSET 10          // Set Mesh bounds as an inset region of the bed
+  #define GRID_MAX_POINTS_X 3    // Don't use more than 7 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define MESH_G28_REST_ORIGIN // After homing all axes ('G28' or 'G28 XYZ') rest Z at Z_MIN_POS
@@ -2466,7 +2466,7 @@
  * SD Card support is disabled by default. If your controller has an SD slot,
  * you must uncomment the following option or it won't work.
  */
-//#define SDSUPPORT  // Ender Configs
+//#define SDSUPPORT
 
 /**
  * SD CARD: ENABLE CRC
@@ -2850,8 +2850,7 @@
 //
 // Ender-2 OEM display, a variant of the MKS_MINI_12864
 //
-// #define ENDER2_STOCKDISPLAY
-// #define GRID_LIMIT 9
+//#define ENDER2_STOCKDISPLAY
 
 //
 // ANET and Tronxy Graphical Controller
@@ -3166,22 +3165,10 @@
 //
 //#define DWIN_CREALITY_LCD           // Creality UI
 //#define DWIN_LCD_PROUI              // Pro UI by MRiscoC
-// Professional firmware features:
-//#define ProUIex 1
-//#define HAS_GCODE_PREVIEW 1
-//#define HAS_TOOLBAR 1
-//#define HAS_PIDPLOT 1
-//#define HAS_ESDIAG 1
-//#define HAS_CGCODE 1
-//#define HAS_LOCKSCREEN 1
-//#define MESH_EDIT_MENU
-//#define USE_STOCK_DWIN_SET
-//#define HAS_SD_EXTENDER 1  // Enable it to support SD card extender cables
-#define SHOW_REAL_POS 1
-
 //#define DWIN_CREALITY_LCD_JYERSUI   // Jyers UI by Jacob Myers
 //#define DWIN_MARLINUI_PORTRAIT      // MarlinUI (portrait orientation)
 //#define DWIN_MARLINUI_LANDSCAPE     // MarlinUI (landscape orientation)
+#define SHOW_REAL_POS 1
 
 //
 // Touch Screen Settings
